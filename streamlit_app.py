@@ -1,7 +1,7 @@
 import streamlit as st
 from transformers import pipeline
 
-# Load the chatbot model once
+# Load the chatbot model
 @st.cache_resource
 
 def load_model():
