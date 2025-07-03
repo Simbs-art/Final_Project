@@ -1,11 +1,11 @@
 # Employee_Absenteeism_Prediction
 Predicting and Understanding Employee Absenteeism Using Machine Learning.
+
 ## Overview
 This project aims to analyze and predict employee absenteeism using a real-world HR dataset from a courier company. Through exploratory data analysis, feature engineering, and machine learning modeling, we identify key patterns and risk factors associated with absentee behavior. The goal is to support HR teams in proactive workforce planning, reducing productivity losses, and developing data-informed policies to manage absenteeism more effectively.
 
 ## Business Goal
 To develop a predictive model that estimates the number of hours an employee is likely to be absent based on various personal, workplace, and health-related features.
-
 This helps organizations:
 - Forecast absentee-related disruptions
 - Identify high-risk absenteeism profiles
@@ -41,3 +41,58 @@ This helps organizations:
 | BMI, Age, Service time     | Health and tenure indicators                          |
 | **Absenteeism time in hours** | Target variable                                      |
 
+## Project Workflow
+
+### 1. Data Preparation
+- Converted `.xls` to `.csv`
+- Cleaned and handled missing values
+- Encoded categorical variables
+- Scaled numerical features
+
+### 2. Exploratory Data Analysis (EDA)
+- Univariate & bivariate plots
+- Correlation matrix
+- Outlier detection
+- Insights around seasonality, distance, health, workload
+
+### 3. Feature Engineering
+- Grouped absence reasons
+- Created custom categories (e.g., absenteeism risk)
+- Transformed skewed features
+
+### 4. Modeling
+- Regression Models:
+  - XGBoost Regressor
+- Classification Option (Risk Classes):
+  - Random Forest
+  - Logistic Regression
+  - XGBoost
+
+### 5. Evaluation Metrics
+- MAE, RMSE, R² Score for regression
+- Confusion matrix, Precision, Recall, F1-Score for classification
+- Feature importance
+
+## Key Insights
+- Health-related absences (e.g., medical visits), and Transportation expense are the most frequent.
+- Distance to work and workload are positively correlated with absentee hours.
+- Social drinkers and smokers tend to be absent longer than non-drinkers/smokers.
+- Employees with disciplinary failures have above-average absence time.
+
+## Tools & Technologies
+- Python (Pandas, NumPy, Scikit-learn, Seaborn, Matplotlib)
+- Jupyter Notebook
+- Streamlit
+- Tableau
+- Git for version control
+
+## Acknowledgements
+- [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Absenteeism+at+work)
+- Kaggle community contributors
+
+## Contact
+**Simbiat Titilope Musa**  
+HR & Data Science and Machine Learning Enthusiast  
+Lisbon, Portugal  
+musasimbiat@gmail.com 
+LinkedIn: https://www.linkedin.com/in/simbiat-adetokunbo-musa-acipm-hrpl-297487150?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
