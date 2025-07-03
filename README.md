@@ -23,7 +23,7 @@ This helps organizations:
 ## Dataset Overview
 - **Source**: Kaggle
 - **Records**: 740 rows × 21 columns
-- **Target Variable**: `Absenteeism time in hours` (continuous)
+- **Target Variable**: Absenteeism time in hours
 - **Features**: Age, distance to work, education, workload, BMI, reason for absence, etc.
 
 ### Selected Columns:
@@ -61,9 +61,9 @@ This helps organizations:
 - Transformed skewed features
 
 ### 4. Modeling
-- Regression Models:
+- Regression Model:
   - XGBoost Regressor
-- Classification Option (Risk Classes):
+- Classification Models:
   - Random Forest
   - Logistic Regression
   - XGBoost
