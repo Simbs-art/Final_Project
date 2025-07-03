@@ -94,5 +94,5 @@ This helps organizations:
 **Simbiat Titilope Musa**  
 HR & Data Science and Machine Learning Enthusiast  
 Lisbon, Portugal  
-musasimbiat@gmail.com 
+Email: musasimbiat@gmail.com 
 LinkedIn: https://www.linkedin.com/in/simbiat-adetokunbo-musa-acipm-hrpl-297487150?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
