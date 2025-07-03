@@ -1,20 +1,15 @@
 import streamlit as st
 import pandas as pd
 import joblib
-import shap
 import matplotlib.pyplot as plt
 import numpy as np
 
 # Load model, scaler, encoder, and training features
-model = joblib.load('xgb_absenteeism_model.pkl')
+model = joblib.load('best_random_forest_model.pkl')
 scaler = joblib.load('scaler.pkl')
 label_encoder = joblib.load('label_encoder.pkl')
 X_train = joblib.load('background_df.pkl')
 feature_columns = joblib.load('feature_columns.pkl')
-
-# Scale and prepare background dataset for SHAP
-background_scaled = pd.DataFrame(scaler.transform(X_train), columns=X_train.columns)
-explainer = shap.Explainer(model, background_scaled)
 
 # Streamlit UI
 st.set_page_config(page_title="Absenteeism Classifier", layout="centered")
@@ -50,15 +45,4 @@ if submitted:
 
     st.subheader("Prediction Result")
     st.success(f"Predicted Absenteeism Level: **{pred_label}**")
-
-    # SHAP Explanation
-    st.subheader("Model Explanation with SHAP")
-    shap_values = explainer(input_scaled)
-    fig, ax = plt.subplots()
-    shap.plots.waterfall(shap_values[0], max_display=10, show=False)
-    st.pyplot(fig)
-
-    # Show user input
-    with st.expander("Show Input Data"):
-        st.dataframe(input_df)
 
